@@ -96,4 +96,5 @@ status_bot
 
 Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
+https://www.instructables.com/Knife-Switch/
 ---
