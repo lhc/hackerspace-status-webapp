@@ -4,7 +4,7 @@
 
 ## Descrição
 
-O **Status Bot** é uma aplicação Flask para monitorar e controlar o status do LHC (Large Hadron Collider). Ele exibe o estado atual do LHC (aberto ou fechado) e mantém um registro de eventos em um banco de dados SQLite. A interface do usuário inclui uma imagem de fundo, botões para alternar o estado do LHC, e uma lâmpada que indica o estado atual. Além disso, a interface tem uma animação de transição e reproduz um som de clique ao mudar o estado.
+O **Status Bot** é uma aplicação Flask para monitorar e controlar o status do LHC (Laboratorio Hacker de Campinas). Ele exibe o estado atual do LHC (aberto ou fechado) e mantém um registro de eventos em um banco de dados SQLite. A interface do usuário inclui uma imagem de fundo, botões para alternar o estado do LHC, e uma lâmpada que indica o estado atual. Além disso, a interface tem uma animação de transição e reproduz um som de clique ao mudar o estado.
 
 ![Status Bot Interface](static/images/lhc-status-webapp.png)
 
