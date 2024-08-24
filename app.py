@@ -79,7 +79,7 @@ def monitor_button():
     while True:
         current_state = GPIO.input(18)
         if current_state != previous_state:
-            if current_state == False:
+            if current_state == True:
                 requests.get('http://localhost:5000/lhc_fechado')
             else:
                 requests.get('http://localhost:5000/lhc_aberto')
