@@ -1,5 +1,9 @@
 from flask import Flask, render_template, redirect, url_for, jsonify
 import sqlite3
+from multiprocessing import Process
+import RPi.GPIO as GPIO
+import time
+import requests
 
 app = Flask(__name__)
 
@@ -67,6 +71,30 @@ def api_status_lhc():
         }
     return jsonify(response)
 
+def monitor_button():
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+    previous_state = GPIO.input(18)
+    while True:
+        current_state = GPIO.input(18)
+        if current_state != previous_state:
+            if current_state == False:
+                requests.get('http://localhost:5000/lhc_fechado')
+            else:
+                requests.get('http://localhost:5000/lhc_aberto')
+            previous_state = current_state
+        time.sleep(0.2)
+
 if __name__ == '__main__':
     init_db()
+    
+    # Cria um processo separado para monitorar o botão
+    p = Process(target=monitor_button)
+    p.start()
+    
+    # Inicia o servidor Flask
     app.run(host="0.0.0.0", debug=True)
+    
+    # Espera o processo do botão terminar (embora isso nunca deva acontecer)
+    p.join()
