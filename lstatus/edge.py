@@ -21,7 +21,7 @@ class EdgeController:
             if current_state != self.previous_state:
                 time.sleep(self.debounce_time)  # Aguarda um pouco para evitar leituras duplicadas
                 if current_state == GPIO.input(self.pin):  # Confirma que o estado ainda é o mesmo
-                    if current_state == False:
+                    if current_state == True:
                         self._send_request('/lhc_fechado')
                     else:
                         self._send_request('/lhc_aberto')
