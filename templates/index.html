@@ -114,6 +114,11 @@
         } else {
           statusIcon.src = "{{ url_for('static', filename='images/lampoff.png') }}";
         }
+
+        // Auto-refresh the page every 10 seconds (10000 milliseconds)
+        setTimeout(function(){
+          window.location.reload();
+        }, 10000);
       });
     </script>
   </body>
