@@ -8,6 +8,13 @@ O **Status Bot** é uma aplicação Flask para monitorar e controlar o status do
 
 ![Status Bot Interface](static/images/lhc-status-webapp.png)
 
+
+
+| | |
+|:-------------------------:|:-------------------------:|
+| <img src="static/images/frontend-status.gif" | <img src="static/images/status_lamp.gif" |
+
+
 ## Funcionalidades
 
 - Exibe o estado atual do LHC (aberto ou fechado).
