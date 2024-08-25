@@ -12,7 +12,7 @@ O **Status Bot** é uma aplicação Flask para monitorar e controlar o status do
 
 | | |
 |:-------------------------:|:-------------------------:|
-| <img src="static/images/frontend-status.gif" | <img src="static/images/status_lamp.gif" |
+| <img src="static/images/frontend-status.gif"> | <img src="static/images/status_lamp.gif"> |
 
 
 ## Funcionalidades
